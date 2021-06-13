@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: NSSM & NGROK
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/NflaZ/rdp/master/Files/ngrok.exe -OutFile ngrok.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/NflaZ/rdp/master/Files/nssm.exe -OutFile nssm.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/HaryoPratama/rdpa/master/Files/ngrok.exe -OutFile ngrok.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/HaryoPratama/rdpa/master/Files/nssm.exe -OutFile nssm.exe
     - name: Copying files to directory.
       run: | 
         copy nssm.exe C:\Windows\System32
@@ -23,9 +23,9 @@ jobs:
         TOKEN: ${{ secrets.TOKEN }}
     - name: Download some files.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/NflaZ/rdp/master/Files/NGROK-US.bat -OutFile NGROK-US.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/NflaZ/rdp/master/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
-        Invoke-WebRequest https://raw.githubusercontent.com/NflaZ/rdp/master/Files/loop.bat -OutFile loop.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/HaryoPratama/rdpa/master/Files/NGROK-US.bat -OutFile NGROK-US.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/HaryoPratama/rdpa/master/Files/NGROK-CHECK.bat -OutFile NGROK-CHECK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/HaryoPratama/rdpa/master/Files/loop.bat -OutFile loop.bat
     - name: Make some YML's files for NGROK.
       run: start NGROK-US.bat
     - name: RDP Access.
